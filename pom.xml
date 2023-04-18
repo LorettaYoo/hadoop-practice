@@ -49,7 +49,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.loretta.MaxScoreMR</mainClass>
+                            <mainClass>org.loretta.ExampleDriver</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
