@@ -19,7 +19,10 @@ public class MaxScoreMR {
 //            System.exit(2);
 //        }
 
-        if (args.length != 2) {
+//        for (String arg : args) {
+//            System.out.println(arg);
+//        }
+        if (args.length < 2) {
             System.out.println("Usage: MaxScoreMR <input_path>  <output_path>");
             System.exit(-1);
         }
@@ -32,8 +35,8 @@ public class MaxScoreMR {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
 
-        FileInputFormat.addInputPath(job, new Path(args[0]));
-        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+        FileInputFormat.addInputPath(job, new Path(args[1]));
+        FileOutputFormat.setOutputPath(job, new Path(args[2]));
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
